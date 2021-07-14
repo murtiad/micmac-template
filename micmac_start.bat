@@ -84,3 +84,9 @@ set IMG="./images/*.*JPG"
 
 :: EXPORT ORTHO ::
  "%BIN%/mm3d" Tawny "PIMs-ORTHO" Out=Orthophotomosaic.tif
+
+:: POISSON MESHING ::
+ "%BIN%/mm3d" TiPunch MicMacPointCloud.ply Pattern=%IMG% Mode=MicMac Depth=8
+ 
+:: MESH TEXTURING ::
+ "%BIN%/mm3d" Tequila %IMG% Scaled MicMacPointCloud_mesh.ply Mode=Basic
