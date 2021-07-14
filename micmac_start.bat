@@ -20,7 +20,8 @@
 ::			MyWorkFolder
 ::	            micmac_win
 ::              myProject
-::                   images in .JPG format (in uppercases, so not .jpg! )
+::                   images
+::                       images in .JPG format (in uppercases, so not .jpg! )
 ::                   GCP coordinates (.txt file)
 ::                   etc.
 ::
@@ -30,7 +31,7 @@
 
 :: first of all, set the path for MicMac functions and input images ::
 set BIN=../micmac_win/bin
-set IMG="./*.*JPG"
+set IMG="./images/*.*JPG"
 
 :: OPTIONAL: Convert embedded/geotagged GPS (and IMU if exists) into approximate EO values ::
  "%BIN%/mm3d" OriConvert OriTxtInFile EmbeddedGPS.csv GeoTagged NameCple=FileImagesNeighbour.xml
@@ -39,7 +40,7 @@ set IMG="./*.*JPG"
 :: IF embedded GPS is available
  "%BIN%/mm3d" Tapioca File FileImagesNeighbour.xml 800
 :: IF no embedded GPS is available
-:: "%BIN%/mm3d" Tapioca MulScale ./*.*JPG 200 800
+:: "%BIN%/mm3d" Tapioca MulScale %IMG% 200 800
 
 :: RELATIVE ORIENTATION ::
  "%BIN%/mm3d" Tapas RadialExtended %IMG% Out=Adjusted
