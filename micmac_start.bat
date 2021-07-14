@@ -50,7 +50,7 @@ set IMG="./images/*.*JPG"
 :: using geotags
  "%BIN%/mm3d" CenterBascule %IMG% Adjusted GeoTagged AbsoluteGPS
  "%BIN%/mm3d" AperiCloud %IMG% AbsoluteGPS Out=AperiCloudAbsoluteGPS.ply
-:: using four GCPs, choose from list of available GCPs and create a text file for these four
+:: using four GCPs, choose from list of available GCPs and create a text file "initialfourGCP.txt" for these four
 :: try selecting well distributed four GCPs for optimal GCP input prediction in the next step 
 :: "%BIN%/mm3d" GCPConvert "#F=N_X_Y_Z" initialfourGCP.txt
 :: "%BIN%/mm3d" SaisieAppuisInitQT %IMG% Adjusted initialfourGCP.xml initalfourGCPMeasures.xml
