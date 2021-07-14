@@ -1,5 +1,5 @@
 # micmac-template
-Template batch file and dummy input files to make your day easier when trying to figure out IGN's MicMac.
+Template batch file and sample input files to make your day easier when trying to figure out IGN's MicMac.
 
 by Arnadi Murtiyoso (c) 2020, Photogrammetry and Geomatics Group, ICube-TRIO UMR 7357 INSA Strasbourg (France)
 
